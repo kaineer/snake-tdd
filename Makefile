@@ -1,2 +1,2 @@
 all:
-	sniffer
+	PYTHONPATH=lib sniffer
