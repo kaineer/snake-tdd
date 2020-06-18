@@ -5,7 +5,7 @@ class TestCanMove(TestCase):
     def test_cannot(self):
         self.assertEqual(
             can_grow(
-              [[1, 1], [2, 1]],
+              [[1, 1], [2, 1], [3, 1]],
               'R'
             ), False)
 
