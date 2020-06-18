@@ -1,13 +1,14 @@
 # Определяет, есть ли в указанном направлении
 #   часть змейки или нет
-#   Возвращает True, если такой элемент найден
-#   Возвращает False в противном случае
+#   Возвращает False, если такой элемент найден
+#   Возвращает True в противном случае
 #
 def can_move(trail, side):
-    q = trail[0]
-    del trail[0]
-    if q in trail:
-        return False
+    t2 = grow(trail, side)
+    for i in trail:
+        if t2[0] == trail[i]:
+            return False
+            
     else:
         return True
 
