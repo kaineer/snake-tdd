@@ -4,7 +4,12 @@
 #   Возвращает False в противном случае
 #
 def can_move(trail, side):
-    return True
+    q = trail[0]
+    del trail[0]
+    if q in trail:
+        return True
+    else:
+        return False
 
 def limit(trail, size):
     return(trail[:size])
